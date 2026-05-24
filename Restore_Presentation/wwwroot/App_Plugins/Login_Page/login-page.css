@@ -1,0 +1,49 @@
+﻿:root {
+    /* Colors: */
+    --color-cream: hsl(43.85, 72.22%, 92.94%);
+    --color-beige: hsl(45.71, 61.76%, 86.67%);
+    --color-green: hsl(120, 14.02%, 41.96%);
+    --color-green-hover: hsl(120, 14.02%, 37.96%);
+    --color-brown: hsl(29.14, 40.23%, 17.06%);
+    --color-black: hsl(30, 30.43%, 9.02%);
+    /* Image that you want on the login screen */
+    --umb-login-image: url("../Images/IMG_3820-kopiera-1024x683.png");
+    /*
+    
+        -- Selectors: --
+
+        Emphasis = Hover.
+
+    */
+    /* Image wrapper */
+    --umb-login-image-display: flex;
+    --umb-login-image-border-radius: 38px;
+    /* Layout */
+    --umb-login-background: var(--color-cream) !important;
+    /* Colors */
+    --umb-login-primary-color: var(--color-green) !important;
+    --umb-login-text-color: var(--color-black) !important;
+    /* Headings */
+    --umb-login-header-font-size: 3rem;
+    --umb-login-header-font-size-large: 4rem;
+    --umb-login-header-secondary-font-size: 2.4rem;
+    /* Content wrapper */
+    --umb-login-content-background: none;
+    --umb-login-content-display: flex;
+    --umb-login-content-width: 100%;
+    --umb-login-content-height: 100%;
+    --umb-login-content-border-radius: 0;
+    /* Alignment */
+    --umb-login-align-items: unset;
+    /* Buttons */
+    --umb-login-button-border-radius: 45px;
+    --umb-login-primary-color: var(--color-green) !important;
+    --uui-color-default-emphasis: var(--color-green-hover) !important;
+    /* Decorative curves */
+    --umb-login-curves-color: var(--color-green) !important;
+    --umb-login-curves-display: inline;
+    /* The button on the logout page got it's color from this selector */
+    --uui-palette-space-cadet: var(--color-green) !important;
+    /* Logout page text */
+    --umb-login-greeting-color: var(--color-green) !important;
+}

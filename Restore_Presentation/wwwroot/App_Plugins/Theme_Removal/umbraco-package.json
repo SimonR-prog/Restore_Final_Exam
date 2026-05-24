@@ -1,0 +1,13 @@
+{
+  "$schema": "../../umbraco-package-schema.json",
+  "name": "Remove default themes",
+  "version": "1.0.0",
+  "extensions": [
+    {
+      "type": "backofficeEntryPoint",
+      "alias": "remove.default.themes",
+      "name": "Remove Default Themes Entry Point",
+      "js": "/App_Plugins/Theme_Removal/theme-removal.js"
+    }
+  ]
+}

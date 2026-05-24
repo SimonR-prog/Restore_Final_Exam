@@ -1,0 +1,47 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    Layout = null;
+
+    var metaDescription = Html.Raw(Model.Value("metaDescription"));
+}
+
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    @* Meta Description: *@
+    <meta name="description" content="@metaDescription" />
+
+    @* FavIcon: *@
+    <link rel="icon" href="~/favicon.png" />
+
+    @* Title: *@
+    @* <title>@Model.Value("title")</title> *@
+    <title>Möbelrestaurering i Mölndal</title>
+
+    @* Stylesheets: *@
+    <link rel="stylesheet" href="~/css/global.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/footer.css" />
+
+    @RenderSection("Styles", required: false)
+    @RenderSection("Head", required: false)
+
+</head>
+<body>
+
+    @await Component.InvokeAsync("Header")
+
+
+    <main>
+        @RenderBody()
+    </main>
+
+    @await Component.InvokeAsync("Footer")
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "$schema": "../../umbraco-package-schema.json",
+  "name": "Backoffice Styling",
+  "version": "1.0.0",
+  "extensions": [
+    {
+      "type": "theme",
+      "alias": "mobel-light",
+      "name": "Möbel Light",
+      "css": "/App_Plugins/Theme/mobel-light.css",
+      "meta": {
+        "weight": 100
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+﻿
+@model Restore_Presentation.Models.ViewModels.HeaderViewModel
+
+@{
+    if (Model == null)
+    {
+        return;
+    }
+
+    // Getting the current page name to highlight it if we are on it.
+    UmbracoContextAccessor.TryGetUmbracoContext(out var umbracoContext);
+    var currentPageName = umbracoContext?.PublishedRequest?.PublishedContent?.Name ?? string.Empty;
+}
+
+<header class="section_header">
+    <a aria-label="Navigera till startsidan" class="header-home-link" href="/" >
+        <img src="/Icons/favicon_RM_256.png" alt="@Model.WebsiteName icon" />
+    </a>
+
+    @if(Model.PageLinks != null)
+    {
+        <nav class="header-links">
+
+            @foreach(var link in Model.PageLinks)
+            {
+                var isCta = link.Name?.ToLower() == "kontakt";
+                var isActive = link.Name == currentPageName@*  && !isPrimary *@;
+
+                <a aria-label="Navigera till @link.Name" href="@link.Url()" class="header-navlink @(isCta ? "special" : "tertiary") @(isActive ? "active" : null)">
+                    <span>@link.Name</span>
+                </a>
+            }
+        </nav>
+    }
+</header>

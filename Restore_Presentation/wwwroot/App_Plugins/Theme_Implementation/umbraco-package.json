@@ -1,0 +1,13 @@
+{
+  "$schema": "../../umbraco-package.json",
+  "name": "Theme Implementer",
+  "version": "1.0.0",
+  "extensions": [
+    {
+      "type": "backofficeEntryPoint",
+      "alias": "theme.implementer.entrypoint",
+      "name": "Theme Implementer Entry Point",
+      "js": "/App_Plugins/Theme_Implementation/theme-implementation.js"
+    }
+  ]
+}

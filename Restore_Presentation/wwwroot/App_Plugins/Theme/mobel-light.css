@@ -1,0 +1,63 @@
+﻿:root {
+    --color-cream: hsl(43.85, 72.22%, 92.94%);
+    --color-cream-hover: hsl(45.71, 61.76%, 86.67%);
+    --color-beige: hsl(45.71, 61.76%, 86.67%);
+    --color-beige-hover: hsl(45.71, 61.76%, 81.67%);
+    --color-green: hsl(120, 14.02%, 41.96%);
+    --color-green-hover: hsl(120, 14.02%, 37.96%);
+    --color-brown: hsl(29.14, 40.23%, 17.06%);
+    --color-black: hsl(30, 30.43%, 9.02%);
+    /* 
+        Selectors:
+    */
+    --uui-color-selected: var(--color-green);
+    --uui-color-current: var(--color-green);
+    --uui-color-focus: var(--color-green);
+    --uui-color-default: var(--color-green);
+    --uui-color-default-emphasis: var(--color-green-hover) !important;
+    --uui-color-selected-emphasis: var(--color-green-hover);
+    --uui-color-current-emphasis: var(--color-green-hover);
+    --uui-color-selected-standalone: #5b8dd7;
+    --uui-color-current-standalone: #5b8dd7;
+    --uui-color-selected-contrast: var(--color-black);
+    --uui-color-current-contrast: #eeeeef;
+    --uui-color-header-contrast: var(--color-black);
+    --uui-color-header-contrast-emphasis: var(--color-green);
+    --uui-color-text: var(--color-black);
+    --uui-color-text-alt: var(--color-green);
+    --uui-color-interactive: var(--color-black);
+    --uui-color-interactive-emphasis: var(--color-green);
+    --uui-color-default-standalone: var(--color-black);
+    --uui-color-default-contrast: var(--color-black);
+    --uui-color-disabled: var(--color-beige);
+    --uui-color-border: #434c56;
+    --uui-color-divider-standalone: var(--color-black);
+    --uui-color-disabled-standalone: #545d68;
+    --uui-color-border-standalone: #545d68;
+    --uui-color-divider-emphasis: #545d68;
+    --uui-color-disabled-contrast: #fcfcfc4d;
+    --uui-color-header-surface: var(--color-beige-hover);
+    --uui-color-background: var(--color-beige);
+    --uui-color-surface: var(--color-cream);
+    --uui-color-surface-alt: var(--color-cream);
+    --uui-color-divider: var(--color-cream-hover);
+    --uui-color-surface-emphasis: var(--color-green-hover);
+    --uui-color-border-emphasis: #626e7b;
+    --uui-color-default-emphasis: var(--color-brown) !important;
+    --uui-color-warning: #af7c12;
+    --uui-color-warning-emphasis: #af7c12;
+    --uui-color-warning-standalone: #af7c12;
+    --uui-color-danger: #ca3b37;
+    --uui-color-danger-emphasis: #ca3b37;
+    --uui-color-danger-standalone: #ca3b37;
+    --uui-color-positive: #347d39;
+    --uui-color-positive-emphasis: #347d39;
+    --uui-color-positive-standalone: #347d39;
+    /* Toggles */
+    --uui-toggle-background-color: var(--color-beige) !important;
+    --uui-toggle-background-color-hover: var(--color-beige-hover) !important;
+    --uui-tab-text-active: var(--color-pink) !important;
+    --uui-color-warning-contrast: var(--color-white) !important;
+    --uui-color-danger-contrast: var(--color-white) !important;
+    --uui-color-positive-contrast: white !important;
+}

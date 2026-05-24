@@ -1,0 +1,58 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<PortfolioPageViewModel>
+
+@{
+	Layout = "layout.cshtml";
+    if (Model == null)
+    {
+        return;
+    }
+}
+
+@section Styles {
+	<link rel="stylesheet" href="~/css/portfolioPage.css" />
+}
+
+<section class="section_portfolio">
+    <h1>@Model.Title</h1>
+    <div aria-hidden="true" class="seperator"></div>
+
+    @if (Model.Images != null)
+    {
+        @foreach (var (item, index) in Model.Images.Select((item, i) => (item, i)))
+        {
+            var count = item.Images?.Count() ?? 1;
+            var duration = 3;
+            var durationShown = count * duration;
+            var isEven = index % 2 == 0;
+
+            <div class="portfolio-card @(isEven ? "portfolio-card--normal" : "portfolio-card--reversed")"
+                 style="--total-duration: @(durationShown)s;">
+                <div class="portfolio-card__slideshow">
+                    @foreach (var (img, i) in item.Images?.Select((img, i) => (img, i)) ?? [])
+                    {
+                        <img class="portfolio-card__slide @(count == 1 ? "portfolio-card__slide--static" : null)"
+                             src="@img.MediaUrl()?format=webp"
+                             alt="@item.Alt"
+                             style="animation-delay: @(i * duration)s;" />
+                    }
+                </div>
+                <div class="portfolio-card__info">
+                    @if (!string.IsNullOrEmpty(item.Title))
+                    {
+                        <h2>@item.Title</h2>
+                    }
+                    @if (item.Description != null)
+                    {
+                        @Html.Raw(item.Description)
+                    }
+                </div>
+            </div>
+        }
+    }
+    @if (!string.IsNullOrWhiteSpace(Model?.CallToAction?.Url))
+    {
+        <div class="portfolio-cta">
+            @await Html.PartialAsync("~/Views/Partials/Components/items/CallToAction.cshtml", @Model.CallToAction)
+        </div>
+    }
+</section>

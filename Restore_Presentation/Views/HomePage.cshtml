@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomePageViewModel>
+
+@{
+	Layout = "layout.cshtml";
+	if (Model == null)
+	{
+		return;
+	}
+}
+
+@section Styles{
+	<link rel="stylesheet" href="~/css/homePage.css" />
+}
+
+<section class="section_home">
+	<div class="section_home-image">
+		<img src="@Model.Image?format=webp" alt="@Model.Alt" />
+	</div>
+	<div class="section_home-text">
+		<h1>@Model.WebsiteName</h1>
+		<h2>@Model.Title</h2>
+		@if (!string.IsNullOrWhiteSpace(Model?.CallToAction?.Url))
+		{
+			@await Html.PartialAsync("~/Views/Partials/Components/items/CallToAction.cshtml", @Model.CallToAction)
+		}
+	</div>
+</section>

@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<PageNotFoundViewModel>
+
+@{
+	Layout = "layout.cshtml";
+	if (Model == null)
+	{
+		return;
+	}
+}
+
+@section Styles {
+	<link rel="stylesheet" href="~/css/notFoundPage.css" />
+}
+
+<section class="section_not-found">
+	<h1 class="section_not-found-h1">@Model.Title</h1>
+	<div aria-hidden="true" class="seperator"></div>
+	<div class="section_not-found-buttons">
+		<a class="section_not-found-button" href="/">
+			Till förstasidan
+		</a>
+		@if (!string.IsNullOrWhiteSpace(Model?.CallToAction?.Url))
+		{
+				@await Html.PartialAsync("~/Views/Partials/Components/items/CallToAction.cshtml", @Model.CallToAction)
+		}
+	</div>
+</section>

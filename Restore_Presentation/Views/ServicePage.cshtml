@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ServicePageViewModel>
+
+@{
+	Layout = "layout.cshtml";
+	if (Model == null)
+	{
+		return;
+	}
+}
+
+@section Styles {
+	<link rel="stylesheet" href="~/css/servicePage.css" />
+}
+
+<section class="section_service">
+	<h1>@Model.Title</h1>
+	<div aria-hidden="true" class="seperator"></div>
+	@if (Model.Services != null)
+	{
+		<div class="section_service-items">
+			@foreach (var service in Model.Services)
+			{
+				<div class="section_service-item">
+					<h2>@service.Title</h2>
+					<p>@service.Text</p>
+				</div>
+			}
+		</div>
+	}
+	@if (!string.IsNullOrWhiteSpace(Model?.CallToAction?.Url))
+	{
+		@await Html.PartialAsync("~/Views/Partials/Components/items/CallToAction.cshtml", @Model.CallToAction)
+	}
+
+</section>

@@ -1,0 +1,58 @@
+﻿
+/* NOT FOUND */
+.section_not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+    padding: 2rem;
+    gap: 1rem;
+}
+.section_not-found-h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.section_not-found-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.section_not-found-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 1rem;
+    cursor: pointer;
+    background: var(--clr-primary-hover);
+    color: var(--clr-body);
+    transition: background-color 0.2s ease;
+    box-shadow: var(--shadow);
+    margin: 0 1rem 0 1rem;
+}
+    .section_not-found-button:hover {
+        background-color: var(--clr-primary);
+        color: var(--clr-headings);
+    }
+
+
+
+@media (max-width: 768px) {
+    .section_not-found-h1 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .section_not-found-buttons {
+        flex-direction: column;
+    }
+
+    .section_not-found-button {
+        margin: 1rem 0 1rem 0;
+    }
+}

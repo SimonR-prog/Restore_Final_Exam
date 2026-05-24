@@ -1,0 +1,64 @@
+﻿
+@model Restore_Presentation.Models.ViewModels.FooterViewModel
+
+@{
+    if (Model == null)
+    {
+        return;
+    }
+}
+
+<footer class="section_footer">
+    <div aria-hidden="true" class="seperator"></div>
+    <div class="footer-text-divs">
+        <div class="section_footer-div">
+            <h3>ADRESS</h3>
+            <ul>
+                <li>
+                    <p>@Model.Adress</p>
+                </li>
+                <li>
+                    <p>@Model.Postal</p>
+                </li>
+                <li>
+                    <p>@Model.City</p>
+                </li>
+            </ul>
+        </div>
+        <div class="section_footer-div">
+            <h3>ÖPPETTIDER</h3>
+            <ul>
+                <li>
+                    <p>@Model.LineOne</p>
+                </li>
+                @if (!string.IsNullOrWhiteSpace(Model.LineTwo))
+                {
+                    <li>
+                        <p>@Model.LineTwo</p>
+                    </li>
+                }
+                @if (!string.IsNullOrWhiteSpace(Model.LineThree))
+                {
+                    <li>
+                        <p>@Model.LineThree</p>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class ="section_footer-div">
+            <h3>SOCIAL MEDIA</h3>
+            @await Component.InvokeAsync("SocialMediaIcon")
+        </div>
+        <div class="section_footer-div">
+            <h3>KONTAKT</h3>
+            <ul>
+                <li>
+                    <a href="mailto:@Model.Email">Email: @Model.Email</a>
+                </li>
+                <li>
+                    <a href="tel:+@Model.PhoneNumberHref">Tel: @Model.PhoneNumber</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>

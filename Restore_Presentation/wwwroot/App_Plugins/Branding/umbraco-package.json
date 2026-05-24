@@ -1,0 +1,21 @@
+{
+  "$schema": "../../umbraco-package-schema.json",
+  "name": "Branding",
+  "version": "1.0.0",
+  "allowPublicAccess": true,
+  "extensions" :
+  [
+    {
+      "type": "appEntryPoint",
+      "alias": "backoffice.icon",
+      "name": "Backoffice Icon",
+      "js": "/App_Plugins/Branding/backoffice-icon.js"
+    },
+    {
+      "type": "appEntryPoint",
+      "alias": "backoffice.title",
+      "name": "Backoffice Title",
+      "js": "/App_Plugins/Branding/backoffice-title.js"
+    }
+  ]
+}

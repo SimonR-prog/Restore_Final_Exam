@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<AboutPageViewModel>
+
+@{
+	Layout = "layout.cshtml";
+	if (Model == null)
+	{
+		return;
+	}
+}
+
+@section Styles{
+	<link rel="stylesheet" href="~/css/aboutPage.css" />
+}
+
+<section class="section_about">
+	<h1>@Model.Title</h1>
+	<div aria-hidden="true" class="seperator"></div>
+	<div class="about-card">
+		<div class="about-card-image-side">
+			<img src="@Model.Image?format=webp" alt="@Model.Alt" />
+		</div>
+		<div class="about-card-text-side">
+			<h2>@Model.FullName</h2>
+			@if (!string.IsNullOrWhiteSpace(Model.JobTitle))
+			{
+				<h3>@Model.JobTitle</h3>
+			}
+			@Html.Raw(Model.Text)
+		</div>
+	</div>
+	@if (!string.IsNullOrWhiteSpace(Model?.CallToAction?.Url))
+	{
+		@await Html.PartialAsync("~/Views/Partials/Components/items/CallToAction.cshtml", @Model.CallToAction)
+	}
+</section>
