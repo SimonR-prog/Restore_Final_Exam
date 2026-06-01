@@ -2,7 +2,7 @@
 
 This repository is showing the project for my final exam to become a web-developer. I removed the YAML-workflow and the appsettings credentials. 
 
-Below I have used claude.ai turn my projectplan and final report into markdown. 
+Below I have used claude.ai to turn my projectplan and final report into markdown. 
 
 ---
 
