@@ -1,6 +1,8 @@
+# Final project for Nackademin.
+
 This repository is showing the project for my final exam to become a web-developer. I removed the YAML-workflow and the appsettings credentials. 
 
-Below is the projectplan and the final report for the assignment. I used claude.ai to clean up the markdown version of both:
+Below I have used claude.ai turn my projectplan and final report into markdown. 
 
 ---
 
