@@ -1,14 +1,10 @@
-# Restore
-
-This repository is showing the project for my final exam to become a web-developer. 
-
-I have just removed the YAML-workflow and the appsettings credentials. 
+This repository is showing the project for my final exam to become a web-developer. I removed the YAML-workflow and the appsettings credentials. 
 
 Below is the projectplan and the final report for the assignment. I used claude.ai to clean up the markdown version of both:
 
 ---
 
-# Project Overview
+# Projectplan
 
 ## Short Project Description
 
@@ -54,7 +50,7 @@ I will build a website for my brother's furniture restoration company.
 
 
 
-# Furniture Restoration Website — Umbraco 17
+# Final Report:
 
 <div align="center">
   
